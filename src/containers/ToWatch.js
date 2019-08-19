@@ -1,11 +1,12 @@
 import { connect } from "react-redux";
-import Details from "../components/Details/Details";
+import ToWatch from "../components/ToWatch";
 import { getDetails } from "../redux/details/actions";
 
-const mapState = (state, ownProps) => {
+const mapState = ({ movies, toWatch, details }) => {
   return {
-    detail: state.details,
-    id: ownProps.match.params.id
+    movies: movies.movies,
+    toWatch: toWatch,
+    detail: details
   };
 };
 
@@ -18,4 +19,4 @@ const mapDispatch = dispatch => {
 export default connect(
   mapState,
   mapDispatch
-)(Details);
+)(ToWatch);

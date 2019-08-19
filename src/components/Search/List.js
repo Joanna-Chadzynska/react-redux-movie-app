@@ -1,10 +1,15 @@
 import React from "react";
 import Item from "./Item";
-const List = ({ movies }) => {
+const List = ({ movies, addToWatch, toWatch }) => {
   return (
-    <ul className="list">
+    <ul className='list'>
       {movies.map(movie => (
-        <Item movie={movie} key={movie.imdbID} />
+        <Item
+          movie={movie}
+          key={movie.imdbID}
+          addToWatch={addToWatch}
+          toWatch={toWatch}
+        />
       ))}
     </ul>
   );

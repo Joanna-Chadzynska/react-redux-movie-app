@@ -1,18 +1,30 @@
-import React from "react";
+import React, { useState } from "react";
 import List from "./List";
-const Search = ({ getMovies, movies }) => {
+import Spinner from "./Spinner";
+
+const Search = ({ getMovies, movies, loading, addToWatch, toWatch }) => {
+  const [name, setValues] = useState("");
+
+  const onChange = e => {
+    setValues(e.target.value);
+  };
+
   const handleOnSubmit = e => {
     e.preventDefault();
     getMovies(e.target.search.value);
+    setValues("");
   };
 
   return (
     <>
       <form onSubmit={handleOnSubmit}>
-        <input type="search" name="search" />
+        <input type='search' name='search' value={name} onChange={onChange} />
         <button>Search</button>
       </form>
-      <List movies={movies} />
+
+      <div className='spinner'>{loading && <Spinner />}</div>
+
+      <List movies={movies} addToWatch={addToWatch} toWatch={toWatch} />
     </>
   );
 };

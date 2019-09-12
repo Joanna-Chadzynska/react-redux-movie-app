@@ -1,21 +1,17 @@
 header {
   display: flex;
   justify-content: space-between;
-  align-items: center;
   padding: 20px 0;
-  ul {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    list-style: none;
 
-    li {
+  div.makeStyles-sectionDesktop-3 {
+    button span {
       margin-left: 1rem;
+
       a {
         text-decoration: none;
         text-transform: uppercase;
         font-size: 0.8rem;
-        color: #323232;
+        color: #fff;
 
         &:hover {
           font-weight: bold;
@@ -26,5 +22,25 @@ header {
         }
       }
     }
+  }
+}
+
+#primary-search-account-menu-mobile
+  > div.MuiPaper-root.MuiMenu-paper.MuiPaper-elevation8.MuiPopover-paper.MuiPaper-rounded
+  > ul
+  > li
+  > button
+  > span.MuiButton-label
+  > a {
+  text-decoration: none;
+  color: #00003f;
+
+  &:hover {
+    font-weight: bold;
+  }
+
+  &:active {
+    color: #00003f;
+    font-weight: bold;
   }
 }

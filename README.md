@@ -1,3 +1,33 @@
+# Project Name
+
+> App to manage a libary of videos.
+
+## Table of contents
+
+- [General info](#general-info)
+- [Screenshots](#screenshots)
+- [Technologies](#technologies)
+- [Setup](#setup)
+- [Features](#features)
+- [Status](#status)
+
+## General info
+
+A simple application to manage a library of movies created on the basis of an open API from http://omdapi.com/
+
+## Screenshots
+
+<!-- ![Example screenshot](./img/screenshot.png) -->
+
+## Technologies
+
+- ReactJS
+- Redux
+- SASS
+
+## Setup
+
+```
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
@@ -66,3 +96,28 @@ This section has moved here: https://facebook.github.io/create-react-app/docs/de
 ### `npm run build` fails to minify
 
 This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+```
+
+## Code Examples
+
+Show examples of usage:
+`put-your-code-here`
+
+## Features
+
+List of features ready and TODOs for future development
+
+- Movie search engine
+- Page with details of the selected film
+
+To-do list:
+
+- List of films watched
+- List of films to watch/favorite
+- List of related films
+- Filtering and sorting a list of favorite movies / movies to watch
+- Saving data to localStorage
+
+## Status
+
+Project is: _in progress_

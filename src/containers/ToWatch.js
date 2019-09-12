@@ -1,18 +1,19 @@
 import { connect } from "react-redux";
 import ToWatch from "../components/ToWatch";
-import { getDetails } from "../redux/details/actions";
 
-const mapState = ({ movies, toWatch, details }) => {
+import { addToWatch, removeFromList } from "../redux/to-watch/actions";
+
+const mapState = (state, ownProps) => {
   return {
-    movies: movies.movies,
-    toWatch: toWatch,
-    detail: details
+    toWatch: state.toWatch.favorite,
+    id: ownProps.match.params.id
   };
 };
 
-const mapDispatch = dispatch => {
+const mapDispatch = (dispatch) => {
   return {
-    getDetails: (query, type) => dispatch(getDetails(query, type))
+    addToWatch: (item) => dispatch(addToWatch(item)),
+    removeFromList: (item) => dispatch(removeFromList(item))
   };
 };
 

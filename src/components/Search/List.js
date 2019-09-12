@@ -5,7 +5,7 @@ import CssBaseline from "@material-ui/core/CssBaseline";
 import Grid from "@material-ui/core/Grid";
 import Container from "@material-ui/core/Container";
 
-const List = ({ movies, addToWatch, toWatch }) => {
+const List = ({ movies, addToWatch, removeFromList }) => {
   const classes = useStyles();
   return (
     <div className='list'>
@@ -17,7 +17,7 @@ const List = ({ movies, addToWatch, toWatch }) => {
               movie={movie}
               key={movie.imdbID}
               addToWatch={addToWatch}
-              toWatch={toWatch}
+              removeFromList={removeFromList}
             />
           ))}
         </Grid>

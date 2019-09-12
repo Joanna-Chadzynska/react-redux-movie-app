@@ -1,11 +1,29 @@
-import { ADD_TO_WATCH_LATER } from "./actions";
+import { ADD_TO_WATCH_LATER, REMOVE_FROM_LIST } from "./actions";
 
-export const toWatch = (state = [], action) => {
+const initialState = {
+  favorite: []
+};
+
+export const toWatch = (state = initialState, action) => {
   switch (action.type) {
     case ADD_TO_WATCH_LATER:
-      const copy = [...state, action.payload];
-      return copy;
+      return Object.assign({}, state, {
+        favorite: [
+          ...state.favorite.filter(
+            (item) => item.imdbID !== action.payload.imdbID
+          ),
+          action.payload
+        ]
+      });
 
+    case REMOVE_FROM_LIST:
+      return Object.assign({}, state, {
+        favorite: [
+          ...state.favorite.filter(
+            (item) => item.imdbID !== action.payload.imdbID
+          )
+        ]
+      });
     default:
       return state;
   }

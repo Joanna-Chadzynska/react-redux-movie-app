@@ -6,7 +6,8 @@ export const useStyles = makeStyles((theme) => ({
   // },
   grow: {
     flexGrow: 1,
-    disp: "flex"
+    disp: "flex",
+    background: "#00003F"
   },
   title: {
     display: "none",

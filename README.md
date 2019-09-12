@@ -13,7 +13,7 @@
 
 ## General info
 
-A simple application to manage a library of movies created on the basis of an open API from http://omdapi.com/
+A simple application to manage a library of movies created on the basis of an open API from http://www.omdbapi.com/
 
 ## Screenshots
 

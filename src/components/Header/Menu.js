@@ -75,7 +75,7 @@ const Menu = () => {
 
   return (
     <nav className={classes.grow}>
-      <AppBar position='static'>
+      <AppBar position='static' style={{ backgroundColor: "#00003F" }}>
         <Toolbar>
           <Typography className={classes.title} variant='h6' noWrap>
             movies4free

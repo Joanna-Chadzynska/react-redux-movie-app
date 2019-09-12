@@ -14,11 +14,11 @@ header {
         color: #fff;
 
         &:hover {
-          font-weight: bold;
+          color: #ff7961;
         }
+
         &.active {
-          color: #00003f;
-          font-weight: bold;
+          color: #757ce8;
         }
       }
     }

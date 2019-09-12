@@ -5,11 +5,11 @@ import Spinner from "./Spinner";
 const Search = ({ getMovies, movies, loading, addToWatch, toWatch }) => {
   const [name, setValues] = useState("");
 
-  const onChange = e => {
+  const onChange = (e) => {
     setValues(e.target.value);
   };
 
-  const handleOnSubmit = e => {
+  const handleOnSubmit = (e) => {
     e.preventDefault();
     getMovies(e.target.search.value);
     setValues("");
@@ -23,7 +23,6 @@ const Search = ({ getMovies, movies, loading, addToWatch, toWatch }) => {
       </form>
 
       <div className='spinner'>{loading && <Spinner />}</div>
-
       <List movies={movies} addToWatch={addToWatch} toWatch={toWatch} />
     </>
   );

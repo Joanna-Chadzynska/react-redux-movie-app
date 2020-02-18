@@ -15,12 +15,11 @@ export const fetchedMoviesError = (payload) => ({
 	payload
 });
 
-export const getMovies = (query, type = typeMapping.search) => (dispatch) => {
+export const getMovies = (query, type, page) => (dispatch) => {
 	dispatch(startFetching());
 
-	fetch(getMoviesUrl(query, type))
+	fetch(getMoviesUrl(query, type, page))
 		.then((response) => response.json())
-		.then((response) => response.Search)
 		.then((movies) => dispatch(fetchedMovies(movies)))
 		.catch((error) => dispatch(fetchedMoviesError(error)));
 };
